@@ -5,37 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Artículo - TravelPro</title>
     <link rel="stylesheet" href="css/style.css"> 
-    <link rel="stylesheet" href="css/style-art.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style-sumar.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
     <link rel="shortcut icon" href="img/globe-solid.webp" />
     <link rel="stylesheet" href="css/articulo-detalle.css"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
+    <link rel="shortcut icon" href="img/globe-solid.webp" />
 
 </head>
-<body>
+<body class="bg-gray-100">
     <header class="main-header">
         <nav>
             <div class="nav-container">
-                <a href="index.html" class="nav-brand"> <i class="fa-solid fa-globe"></i>
+                <a href="../index.html" class="nav-brand">
+                    <i class="fa-solid fa-globe"></i>
                     <span>TravelPro</span>
                 </a>
                 <div class="nav-right">
-                    <a class="nav-button" href="login.html"> Mi Cuenta</a>
-                    
-                    <div class="shorcuts-cart"> 
-                        <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
-                    </div>
-
+                    <a class="nav-button" href="../login.html"> Mi Cuenta</a>
                     <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
+                </div>
+                <div class="nav-links">
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-plane"></i>
+                        <a href="#">Vuelos</a>
+                    </div>
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-car"></i>
+                        <a href="#"> Autos</a>
+                    </div>
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-hotel"></i>
+                        <a href="#"> Hoteles</a>
+                    </div>
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-ticket"></i>
+                        <a href="#"> Pasajes</a>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container article-detail-page">
+        <main class="package-detail-page">
+        <div class="container mx-auto px-4">
+                <div class="detail-header">
+                <h1>Conocé cancún. Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!
+                </h1>
+                <button class="share-button"><i class="fas fa-share-alt"></i></button>
+            </div>
         <div id="article-detail-container" class="package-detail-page">
             <p>Cargando detalles del artículo...</p>
         </div>
@@ -45,24 +70,31 @@
         <div id="error-message" style="display: none; text-align: center; margin-top: 20px; color: red;">
             <p>Error al cargar el artículo. Por favor, intente de nuevo.</p>
         </div>
-    </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section about">
-                    <h4>TravelPro</h4>
-                    <p>Tu compañero de confianza para experiencias de viaje inolvidables. Descubre el mundo con nosotros.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+        <div class="package-content-wrapper">
+        <div class="package-main-content">
+        
                 </div>
 
-                <div class="footer-section links">
-                    <h4>Enlaces Rápidos</h4>
+            </div>
+        </div>
+    </main>
+  
+
+        <footer id="contacto" class="footer">
+        <div class="container mx-auto px-4">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-globe"></i>
+                        <span>Travel Pack</span>
+                    </div>
+                    <p>Tu compañero de confianza para descubrir el mundo. Creamos experiencias únicas que duran toda la
+                        vida.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
                     <ul>
                         <li><a href="#paquetes">Paquetes Turísticos</a></li>
                         <li><a href="#servicios">Vuelos</a></li>
@@ -97,7 +129,8 @@
         </div>
     </footer>
 
-    <script src="js/scrip.js"></script>
+    <script src="/js/scrip.js"></script>
+    <script src="js/sumarC.js"></script>
     <script type="module" src="js/load_article_detail.js"></script> 
 </body>
 </html>
