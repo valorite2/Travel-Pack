@@ -529,6 +529,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
                 </aside>
             </div>
+
+                <script src="js/sumarC.js"></script>
         `;
 
         const addToCartBtn = articleDetailContainer.querySelector('.add-to-cart-detail');
