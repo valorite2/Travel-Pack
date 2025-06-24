@@ -86,8 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <button class="tab-button" data-tab="vuelos">Vuelos</button>
                         <button class="tab-button" data-tab="hoteles">Hoteles</button>
                     </nav>
-
-                    
+                </div>
 
                 
                 
