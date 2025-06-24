@@ -1,0 +1,1224 @@
+
+/* Variables CSS para colores */
+:root {
+    --primary-color: #fff;
+    /* Azul vibrante, similar a Despegar */
+    --secondary-color: #fff;
+    /* Azul más oscuro para hover */
+    --text-color: #ffffff;
+    --light-bg: #fafdff;
+    --dark-bg: #fff;
+    --white: hwb(220 10% 37%);
+    --border-color: #fff;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* --- Header --- */
+nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #1E40AF;
+    height: 10vh;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fefefe;
+}
+
+.nav-brand i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    color: #ffffff;
+}
+
+.nav-brand span {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-right {
+    margin-left: 0.75rem;
+    margin-left: 0.875rem;
+}
+
+.nav-button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.nav-button:hover {
+    background-color: #1E40AF;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-right a {
+    color: #000000;
+    font-size: 1rem;
+}
+
+.nav-right button {
+    background-color: #1E40AF;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+}
+
+.hamburger {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    background-color: #1D4ED8;
+}
+
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 10;
+}
+
+.nav-links a {
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    padding: 20px;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+}
+
+.shorcuts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.shorcuts i {
+    color: #ffffff;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+
+
+/*---estilo del cuadro central--*/
+.buscador-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    padding: 20px;
+    padding-block: 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px hsl(0, 0%, 9%);
+}
+
+.buscador-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #003580;
+}
+
+.buscador-cuadro h2 {
+    text-align: left;
+    color: #616161;
+    margin-bottom: 15px;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.formulario input[type="text"],
+.formulario input[type="date"] {
+    color: #616161;
+    padding: 10px;
+    border: 1px solid #C4C4C4;
+    border-radius: 6px;
+    flex: 1 1 150px;
+}
+
+.habitaciones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #C4C4C4;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.habitaciones label {
+    color: #616161;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.formulariobtn {
+    background-color: #fdb813;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: all ease-in-out 0.3s;
+}
+
+.formulariobtn:hover {
+    background-color: #e5a300;
+}
+
+/*--final del estilo de boton--*/
+
+
+
+
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 10% 0;
+    height: 50%;
+    background-image: url("../fondo.webp");
+    background-size: cover;
+    background-position: center;
+    /* This centers the image */
+    background-repeat: no-repeat;
+    /* This prevents the image from repeating */
+    background-attachment: fixed;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 60px;
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    height: 100px;
+}
+
+
+/* --- Info Section (Features Grid) --- */
+.info-section {
+    text-align: center;
+    padding: 100px 0;
+    height: 100vh;
+    margin-bottom: 40px;
+    background-image: url("/..fondo.webp");
+    /* imagen de fondo */
+    background-size: cover;
+}
+
+.info-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+
+/* --- Packages Section --- */
+
+
+.packages {
+    display: flex;
+    /* Usamos flexbox para el layout */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 0;
+    /* Añadido padding vertical para separación */
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #333;
+    padding: 50px 20px 20px 20px;    /* Ajuste de padding para el título de la sección */
+}
+
+.hero-title{
+    font-family: 'Caprasimo';
+    font-weight: bold ;
+}
+
+.container-pack {
+    display: flex;
+    /* Usamos flexbox para el layout */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se envuelvan a la siguiente línea */
+    gap: 20px;
+    /* Espacio entre las tarjetas */
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
+    width: 90%;
+    /* Ancho del contenedor */
+    max-width: 1300px;
+    /* Ancho máximo para el layout de 4 columnas */
+    margin: 0 auto;
+    /* Centra el contenedor */
+}
+
+.package-card {
+    background-color: #fff;
+    border-radius: 8px;
+    /* Ligeramente más pequeños que los 10px anteriores */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra más sutil */
+    overflow: hidden;
+    /* Calculamos el ancho para 4 columnas con un gap de 20px */
+    width: calc(25% - 15px);
+    /* (100% - 3*20px)/4 = 25% - 15px */
+    transition: transform 0.2s ease-in-out;
+    box-sizing: border-box;
+    /* Crucial para el calculo del width */
+    display: flex;
+    /* Hacemos la tarjeta flex para que el contenido se ajuste */
+    flex-direction: column;
+    /* Contenido en columna */
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Sombra más pronunciada al hover */
+}
+
+.package-card.hidden {
+    display: none;
+}
+
+.btn-cart {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    /* Ligeramente más pequeña que los 200px anteriores */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.duration {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Eliminamos .price-overlay ya que no lo usaremos */
+
+.package-details {
+    padding: 15px;
+    /* Ajustado de 16px */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* Permite que esta sección se expanda para llenar el espacio restante */
+}
+
+.package-info {
+    margin-bottom: 15px;
+}
+
+.package-type {
+    color: #777;
+    /* Cambiado de #888 */
+    font-size: 0.85em;
+    /* Ajustado de 0.8rem */
+    margin-bottom: 5px;
+}
+
+.package-title {
+    font-size: 1.3em;
+    /* Ajustado de 1.2rem */
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    /* Añadido margin-bottom */
+    color: #ffc107;
+}
+
+.rating .score {
+    color: #333;
+    font-weight: bold;
+    /* Añadido bold */
+    margin-right: 5px;
+}
+
+.departure,
+.includes {
+    color: #555;
+    /* Ajustado de #555 */
+    font-size: 0.9em;
+    /* Ajustado de 0.9rem */
+    margin-bottom: 5px;
+}
+
+.price-info {
+    /* Nuevo estilo para la sección de precios */
+    text-align: right;
+    margin-top: auto;
+    /* Empuja el bloque de precios hacia abajo dentro del flex container */
+    padding-top: 10px;
+    /* Un poco de espacio superior */
+    border-top: 1px solid #eee;
+    /* Separador sutil */
+}
+
+.savings {
+    color: green;
+    /* Color verde para ahorros */
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.original-price {
+    color: #777;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.final-price {
+    font-size: 1.5em;
+    /* Tamaño más grande para el precio final */
+    color: #e44d26;
+    /* Color rojo/naranja distintivo */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.price-details {
+    color: #777;
+    font-size: 0.8em;
+    /* Ajustado de 0.8rem */
+    margin-bottom: 0;
+    /* Asegura que no haya margin inferior si el botón va después */
+}
+
+.view-package {
+    /* Cambiado de .btn-cart a .view-package */
+    background-color: #007bff;
+    /* Azul vibrante, similar a la primera propuesta */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    /* Bordes más cuadrados que los 6px anteriores */
+    cursor: pointer;
+    font-size: 1em;
+    /* Ajustado de 1rem */
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    /* Espacio superior para el botón */
+}
+
+.view-package:hover {
+    background-color: #0056b3;
+    /* Azul más oscuro al pasar el ratón */
+}
+
+/* Estilo del botón "Ver más paquetes" */
+.ver-mas {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    /* Espacio superior al botón */
+}
+
+.ver-mas:hover {
+    background-color: #0056b3;
+}
+
+/* para que el link del cuadro sea del mismo tamaño*/
+
+
+
+
+/* --- Servicios Section --- */
+
+.services {
+    padding: 5rem 0;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #313131;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.service-icon.blue {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.service-icon.green {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.service-icon.purple {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.service-icon.orange {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.service-icon.teal {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+}
+
+.service-icon.pink {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #6b7280;
+}
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background: #1f2937;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #d1d5db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+    color: #9ca3af;
+}
+
+
+
+
+/* Responsive adjustments */
+/* Responsive adjustments for Packages Section */
+/* Para 4 columnas en pantallas grandes */
+@media (min-width: 1200px) {
+
+    /* Ajusta este valor si necesitas más espacio para 4 columnas */
+    .package-card {
+        width: calc(25% - 15px);
+        /* 4 columnas, incluyendo gap de 20px */
+    }
+}
+
+/* Para 3 columnas en pantallas medianas */
+@media (max-width: 1199px) and (min-width: 800px) {
+
+    /* Rango para 3 columnas */
+    .container-pack {
+        max-width: 900px;
+        /* Ajusta el max-width del contenedor para 3 columnas */
+    }
+
+    .package-card {
+        width: calc(33.333% - 13.333px);
+        /* 3 columnas, incluyendo gap de 20px */
+    }
+}
+
+/* Para 2 columnas en pantallas pequeñas */
+@media (max-width: 799px) and (min-width: 500px) {
+
+    /* Rango para 2 columnas */
+    .container-pack {
+        max-width: 600px;
+        /* Ajusta el max-width del contenedor para 2 columnas */
+    }
+
+    .package-card {
+        width: calc(50% - 10px);
+        /* 2 columnas, incluyendo gap de 20px */
+    }
+}
+
+/* Para 1 columna en pantallas muy pequeñas */
+@media (max-width: 499px) {
+
+    /* Rango para 1 columna */
+    .container-pack {
+        max-width: 320px;
+        /* Ajusta el max-width del contenedor para 1 columna */
+    }
+
+    .package-card {
+        width: 100%;
+        /* 1 columna */
+    }
+}
+
+
+@media (min-width: 768px) {
+    .nav-right {
+        margin-left: 0;
+        order: 2;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+    }
+
+    .nav-links a {
+        padding: 0;
+        color: #ffffff;
+        background-color: transparent;
+        font-size: 16px;
+        padding: 0 20px 0 20px;
+    }
+
+    .shorcuts {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-pack {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .main-header .container {
+        flex-direction: column;
+        /* Stack logo and nav vertically */
+        align-items: flex-start;
+        /* Align items to the start for better mobile layout */
+    }
+
+    /* Adjust the main-nav positioning for mobile */
+    .main-nav {
+        width: 100%;
+        position: relative;
+        /* Align the nav-toggle button to the right */
+        display: flex;
+        justify-content: space-between;
+        /* Space out logo and toggle */
+        align-items: center;
+        /* Removed margin-top and padding-right adjustments as the structure changed */
+        margin-top: 15px;
+        /* Add some space below the brand/logo on mobile */
+        padding-right: 0;
+    }
+
+    /* Ensure the nav brand is always visible and at the top left */
+    .nav-brand {
+        width: auto;
+        /* Allow content to dictate width */
+        margin-bottom: 0;
+        text-align: left;
+        /* Align brand text to the left */
+        order: -1;
+        /* Puts the brand before the toggle button within main-nav flex container */
+    }
+
+    .main-nav .nav-toggle {
+        display: block;
+        /* Muestra el botón de menú hamburguesa */
+        margin-left: auto;
+        /* Push toggle to the right */
+        order: 1;
+        /* Puts the toggle after the nav-list in flex order */
+    }
+
+    .main-nav .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        /* This is crucial for the "not cut off" part */
+        top: 100%;
+        /* Position right below the main-nav (logo + toggle) */
+        left: 0;
+        z-index: 999;
+        /* Below the toggle, but above other content */
+        padding: 10px 0;
+        border-radius: 0 0 8px 8px;
+        /* Rounded bottom corners */
+    }
+
+    .main-nav .nav-list.active {
+        display: flex;
+        /* When active, ensure it's positioned correctly below the header */
+        /* To prevent content shift, consider adding min-height or max-height with overflow */
+        max-height: calc(100vh - 80px);
+        /* Adjust 80px based on header height */
+        overflow-y: auto;
+        /* Allow scrolling if menu is too long */
+    }
+
+    .main-nav .nav-list li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .main-nav .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav .nav-list a {
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+    }
+
+
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        /* Adjusted for better mobile display */
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .info-section h2 {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .hero-section h1 {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            /* Adjusted for better mobile display */
+        }
+
+        .hero-section p {
+            font-size: 0.9rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.4rem;
+        }
+
+        .main-footer .social-links a {
+            font-size: 1.2rem;
+        }
+
+    }
+}
+
+/* --- Modales (Carrito y Pago) --- */
+.modal {
+    /* Por defecto, los modales están ocultos */
+    display: none;
+
+    /* Posicionamiento fijo para que cubra toda la ventana */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Fondo semi-transparente oscuro */
+    background-color: rgba(0, 0, 0, 0.7);
+
+    /* Z-index alto para asegurar que esté por encima de todo */
+    z-index: 1000;
+
+    /* Usar flexbox para centrar el contenido del modal */
+    display: flex;
+    /* Lo mantenemos así, pero el 'display: none' inicial lo oculta */
+    justify-content: center;
+    align-items: center;
+
+    /* Efecto de transición para la aparición/desaparición */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* La clase 'active' controla la visibilidad real del modal */
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    /* Remover display:flex de aquí, ya está en .modal para centrado */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+
+    /* Efecto de animación al aparecer el contenido (opcional, pero mejora la UX) */
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    /* Transición para el efecto de slide-in */
+}
+
+/* Al activar el modal, el contenido se desliza a su posición */
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+
+.close-button {
+    color: #aaa;
+    float: right;
+    /* Para alinearlo a la derecha */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    /* Posicionamiento absoluto dentro del modal-content */
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.cart-items-list {
+    max-height: 400px;
+    /* Limitar altura para scroll */
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    /* Para el scrollbar, si es necesario */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.cart-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.cart-item-details p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.quantity-controls button {
+    background-color: #00a6a6;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-controls button:hover {
+    background-color: #008787;
+}
+
+.quantity-controls span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.remove-item-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item-btn:hover {
+    background-color: #c82333;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.cart-summary h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* Estilos para el formulario de pago dentro del modal */
+#payment-form .input-group {
+    margin-bottom: 15px;
+}
+
+#payment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#payment-form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#payment-form button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilos para los mensajes globales de los modales */
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* No es necesario definir .message en rojo/verde aquí si ya lo haces en JS */
+
+/* Responsive para modales */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .cart-item-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cart-item-details h4 {
+        font-size: 1rem;
+    }
+
+    .quantity-controls button {
+        padding: 3px 8px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/*para q se vean las letras del modal del carrito*/
+#cart-modal{
+    color: hsl(0, 0%, 9%);
+}

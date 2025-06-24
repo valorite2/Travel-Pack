@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Subir Nuevo Artículo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/upload.css">
+    <link rel="shortcut icon" href="img/globe-solid.webp" />
+</head>
+<body>
+    <header class="main-header">
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>TravelPro Admin</span>
+                </a>
+                <div class="nav-right">
+                    <a class="nav-button" href="index.html">Ver Sitio</a>
+                    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-links">
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-plane"></i>
+                        <a href="#">Gestionar Vuelos</a>
+                    </div>
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-hotel"></i>
+                        <a href="#">Gestionar Hoteles</a>
+                    </div>
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-car"></i>
+                        <a href="#">Gestionar Autos</a>
+                    </div>
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-ticket"></i>
+                        <a href="#">Gestionar Paquetes</a>
+                    </div>
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <a href="#">Configuración</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="upload-main-content">
+        <div class="upload-card">
+            <h2>Subir Nuevo Artículo</h2>
+            <p id="upload-message" class="upload-message" style="display: none;"></p>
+            <form id="upload-form">
+                <div class="form-group">
+                    <label for="tipo-articulo"><i class="fas fa-tags"></i> Tipo de Artículo:</label>
+                    <select id="tipo-articulo" required>
+                        <option value="">Selecciona un tipo</option>
+                        <option value="pasaje">Pasaje</option>
+                        <option value="paquete">Paquete</option>
+                        <option value="excursion">Excursión</option>
+                        <option value="alojamiento">Alojamiento</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion-articulo"><i class="fas fa-align-left"></i> Descripción:</label>
+                    <textarea id="descripcion-articulo" rows="5" required placeholder="Ingresa la descripción detallada del artículo, paquete, etc."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-articulo"><i class="fas fa-calendar-alt"></i> Fecha:</label>
+                    <input type="date" id="fecha-articulo" required>
+                </div>
+                <div class="form-group">
+                    <label for="article-price">Precio:</label>
+                    <input type="number" id="article-price" placeholder="Ej: 1500.00" step="0.01" required>
+                </div>
+                <div class="form-group file-upload-group">
+                    <label for="imagen-articulo" class="file-upload-label"><i class="fas fa-cloud-upload-alt"></i> Imagen del Artículo:</label>
+                    <input type="file" id="imagen-articulo" accept="image/*" required>
+                    <span id="file-name-display" class="file-status">Ningún archivo seleccionado</span>
+                    <img id="image-preview" src="#" alt="Previsualización de la imagen" style="display: none;">
+                </div>
+                <button type="submit" class="btn-submit"><i class="fas fa-upload"></i> Subir Artículo</button>
+            </form>
+            <a href="index.html" class="btn-back-to-login"><i class="fas fa-arrow-left"></i> Volver al Inicio de Sesión</a>
+        </div>
+    </main>
+
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 TravelPro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/upload_script.js"></script>
+</body>
+</html>

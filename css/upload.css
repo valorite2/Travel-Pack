@@ -1,0 +1,301 @@
+/* Variables CSS (pueden heredar de style.css o definirse aquí para override) */
+:root {
+    --primary-color-upload: #1E40AF; /* Azul oscuro para elementos principales */
+    --secondary-color-upload: #fdb813; /* Amarillo para acentos */
+    --text-dark-upload: #333;
+    --text-light-upload: #555;
+    --border-color-upload: #ddd;
+    --light-bg-upload: #f4f7f6; /* Fondo suave para la sección principal */
+    --card-bg-upload: #ffffff;
+    --shadow-light-upload: rgba(0, 0, 0, 0.1);
+    --shadow-medium-upload: rgba(0, 0, 0, 0.2);
+    --success-bg: #d4edda;
+    --success-text: #155724;
+    --success-border: #c3e6cb;
+    --error-bg: #f8d7da;
+    --error-text: #721c24;
+    --error-border: #f5c6cb;
+}
+
+/* Estilo para la sección principal que contiene el formulario */
+.upload-main-content {
+    background-color: var(--light-bg-upload);
+    padding: 50px 0; /* Padding superior e inferior para espacio */
+    min-height: calc(100vh - 10vh - 10vh); /* Altura mínima: VH total - altura del header - altura del footer */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    box-sizing: border-box;
+}
+
+/* Estilo de la tarjeta que contiene el formulario */
+.upload-card {
+    background-color: var(--card-bg-upload);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px var(--shadow-light-upload);
+    max-width: 650px;
+    width: 90%; /* Ancho responsivo */
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.upload-card h2 {
+    color: var(--primary-color-upload);
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+/* Mensaje de subida (éxito/error) */
+.upload-message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none; /* Controlado por JS */
+}
+.upload-message.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid var(--success-border);
+}
+
+.upload-message.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-border);
+}
+
+
+/* Contenedor para cada grupo de formulario (label + input) */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: flex; /* Para alinear icono y texto */
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-dark-upload);
+    font-size: 1.05em;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: var(--primary-color-upload);
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border-color-upload);
+    border-radius: 8px;
+    font-size: 1.0em;
+    color: var(--text-light-upload);
+    background-color: #fcfcfc;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color-upload);
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Estilo para el input de tipo file (ocultamos el original y estilamos un label) */
+.file-upload-group input[type="file"] {
+    display: none; /* Oculta el input de archivo original */
+}
+
+.file-upload-label {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #cbd5e0;
+    font-weight: 500;
+    font-size: 0.95em;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.file-upload-label i {
+    margin-right: 10px;
+    color: #4a5568;
+}
+
+.file-upload-label:hover {
+    background-color: #d1d9e2;
+    border-color: #aeb9c6;
+}
+
+.file-status {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: var(--text-light-upload);
+    font-style: italic;
+    background-color: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px dashed #ccc;
+    word-break: break-all;
+}
+
+/* Botones */
+.btn-submit {
+    background-color: var(--primary-color-upload);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.15em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin-top: 30px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(30, 64, 175, 0.2);
+    display: flex; /* Para centrar icono y texto */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-submit:hover {
+    background-color: #1a368b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(30, 64, 175, 0.3);
+}
+
+.btn-submit i {
+    margin-right: 10px;
+}
+
+.btn-back-to-login {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--primary-color-upload);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color-upload);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1em;
+    display: flex; /* Para centrar icono y texto */
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto; /* Centrar el botón */
+    max-width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+.btn-back-to-login:hover {
+    background-color: var(--primary-color-upload);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(30, 64, 175, 0.2);
+}
+
+.btn-back-to-login i {
+    margin-right: 8px;
+}
+/* Puedes añadir esto al final de tu css/upload.css */
+#image-preview {
+    max-width: 200px; /* Tamaño máximo para la previsualización */
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none; /* Oculto por defecto, se muestra con JS */
+}
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .upload-main-content {
+        padding: 30px 0;
+    }
+    .upload-card {
+        padding: 25px;
+        width: 95%;
+    }
+    .upload-card h2 {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    .form-group label {
+        font-size: 1em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+    .btn-submit {
+        padding: 12px 20px;
+        font-size: 1.05em;
+    }
+    .btn-back-to-login {
+        padding: 8px 15px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .upload-main-content {
+        padding: 20px 0;
+    }
+    .upload-card {
+        padding: 20px;
+    }
+    .upload-card h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-size: 0.95em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .file-upload-label {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .file-status {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+    .btn-submit {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+    .btn-back-to-login {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+}
