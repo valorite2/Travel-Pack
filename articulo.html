@@ -73,7 +73,218 @@
 
         <div class="package-content-wrapper">
         <div class="package-main-content">
-        
+        <nav class="detail-tabs">
+                    </nav>
+
+                    <div id="descripcion" class="tab-content active">
+                    </div>
+
+                    <div id="fechas-precios" class="tab-content">
+                        <div class="month-selector">
+                        </div>
+
+                        <div class="calendar-grid-container">
+                            <div class="calendar-grid">
+                                <div class="calendar-day-header">LU</div>
+                                <div class="calendar-day-header">MA</div>
+                                <div class="calendar-day-header">MI</div>
+                                <div class="calendar-day-header">JU</div>
+                                <div class="calendar-day-header">VI</div>
+                                <div class="calendar-day-header">SA</div>
+                                <div class="calendar-day-header">DO</div>
+
+                                <!-- November 2025 (as per image) -->
+                                <div class="calendar-day disabled"></div> <!-- Oct 27 -->
+                                <div class="calendar-day disabled"></div> <!-- Oct 28 -->
+                                <div class="calendar-day disabled"></div> <!-- Oct 29 -->
+                                <div class="calendar-day disabled"></div> <!-- Oct 30 -->
+                                <div class="calendar-day disabled"></div> <!-- Oct 31 -->
+                                <div class="calendar-day">1</div>
+                                <div class="calendar-day">2</div>
+
+                                <div class="calendar-day">3</div>
+                                <div class="calendar-day">4</div>
+                                <div class="calendar-day">5</div>
+                                <div class="calendar-day">6</div>
+                                <div class="calendar-day">7</div>
+                                <div class="calendar-day">8</div>
+                                <div class="calendar-day">9</div>
+
+                                <div class="calendar-day">10</div>
+                                <div class="calendar-day">11</div>
+                                <div class="calendar-day">12</div>
+                                <div class="calendar-day">13</div>
+                                <div class="calendar-day">14</div>
+                                <div class="calendar-day">15</div>
+                                <div class="calendar-day">16</div>
+
+                                <div class="calendar-day">17</div>
+                                <div class="calendar-day">18</div>
+                                <div class="calendar-day">19</div>
+                                <div class="calendar-day">20</div>
+                                <div class="calendar-day">21</div>
+                                <div class="calendar-day selected-day">
+                                    <span>22</span>
+                                    <span class="calendar-day-price">853K</span>
+                                </div>
+                                <div class="calendar-day">23</div>
+
+                                <div class="calendar-day">24</div>
+                                <div class="calendar-day">25</div>
+                                <div class="calendar-day">26</div>
+                                <div class="calendar-day">27</div>
+                                <div class="calendar-day">28</div>
+                                <div class="calendar-day">29</div>
+                                <div class="calendar-day">30</div>
+                            </div>
+
+                            <div class="flight-hotel-summary">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="vuelos" class="tab-content">
+                        
+                        <!-- Selected Flight Card - Mimicking imagen_2025-06-23_034245338.png -->
+                        <div class="flight-card bg-blue-90 text-white shadow-lg">
+                            <div class="p-4 flex justify-between items-center bg-blue-600 rounded-t-xl">
+                                <!-- Price summary could go here too, but image has it on the right -->
+                            </div>
+                            <div class="p-4 bg-white text-gray-800">
+                                <!-- Outbound Flight -->
+                                <div class="flight-segment flex items-center py-4 border-b border-gray-200">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mt-2">
+                                            <div class="baggage-icons">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto text-gray-500 text-lg">
+                                    </div>
+                                </div>
+                                <!-- Return Flight -->
+                                <div class="flight-segment flex items-center py-4">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mt-2">
+                                            <div class="baggage-icons">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto text-gray-500 text-lg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-blue-600 text-white rounded-b-xl flex flex-col items-end">
+                                <div class="flex items-center mt-2">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Example Flight Option Card - Mimicking imagen_2025-06-23_034153170.png -->
+                        <div class="flight-card shadow-lg mb-6 border border-gray-200">
+                            <div class="p-4 flex justify-between items-center bg-green-700 text-white rounded-t-xl">
+                            </div>
+                            <div class="p-4 bg-white text-gray-800">
+                                <!-- Outbound Flight Segment -->
+                                <div class="flight-segment py-4 border-b border-gray-200">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mt-2">
+                                            <div class="baggage-icons">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto text-gray-500 text-lg">
+                                    </div>
+                                </div>
+                                <!-- Return Flight Segment -->
+                                <div class="flight-segment py-4">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mt-2">
+                                            <div class="baggage-icons">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto text-gray-500 text-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Another Flight Option Card -->
+                        <div class="flight-card shadow-lg mb-6 border border-gray-200">
+                            <div class="p-4 flex justify-between items-center bg-white text-gray-800 rounded-t-xl">
+                                <div class="flex items-center">
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white text-gray-800">
+                                <!-- Outbound Flight Segment 1 -->
+                                <div class="flight-segment py-4 border-b border-gray-200">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mt-2">
+                                            <div class="baggage-icons">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto text-gray-500 text-lg">
+                                    </div>
+                                </div>
+                                <!-- Outbound Flight Segment 2 -->
+                                <div class="flight-segment py-4 border-b border-gray-200">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mt-2">
+                                            <div class="baggage-icons">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto text-gray-500 text-lg">
+                                    </div>
+                                </div>
+                                
+                                <!-- Return Flight Segment -->
+                                <div class="flight-segment py-4 border-t border-gray-200 mt-4">
+                                    <div class="flex-1">
+                                        <div class="flex items-center mt-2">
+                                            <div class="baggage-icons">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ml-auto text-gray-500 text-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="hoteles" class="tab-content">
+                        
+                        <!-- Hotel Card - Mimicking imagen_2025-06-23_034448548.png -->
+                        <div class="hotel-card mb-6">
+                            <div class="hotel-image-carousel">
+                            </div>
+                            <div class="hotel-info">
+                                <div class="hotel-info-top">
+                                    <div class="rating">
+                                        <div class="stars text-orange-400">
+                                        </div>
+                                    </div>
+                                    <div class="hotel-badges">
+                                    </div>
+                                </div>
+                                <div class="hotel-price-block">
+                                    <div class="flex items-center justify-end mb-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <section class="policies-section">
+                        
+                    </section>
+
                 </div>
 
             </div>
