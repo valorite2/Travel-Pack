@@ -77,9 +77,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             <div class="package-content-wrapper">
                 <div class="package-main-content">
-                    <img src="${articulo.imagen_url || 'img/placeholder.webp'}" alt="${articulo.descripcion || 'Imagen del Artículo'}" class="main-image">
-                    
-                
+                    <img src="${articulo.imagen_url || 'img/placeholder.webp'}" alt="${articulo.descripcion || 'Imagen'}" class="main-image">
+                    <div class="detail-info">
+                        <p><strong>Tipo:</strong> ${articulo.tipo_articulo ? articulo.tipo_articulo.toUpperCase() : 'N/A'}</p>
+                        <p><strong>Fecha:</strong> ${articulo.fecha || 'N/A'}</p>
+                        <div class="full-description">
+                            <h3>Descripción</h3>
+                            <p>${articulo.descripcion || 'No hay descripción disponible.'}</p>
+                        </div>
+                    </div>
+                </div>
 
                 
                 
