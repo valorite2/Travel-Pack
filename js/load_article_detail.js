@@ -79,14 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <div class="package-main-content">
                     <img src="${articulo.imagen_url || 'img/placeholder.webp'}" alt="${articulo.descripcion || 'Imagen del Artículo'}" class="main-image">
                     
-                    
-                    <nav class="detail-tabs">
-                        <button class="tab-button active" data-tab="descripcion">Descripción</button>
-                        <button class="tab-button" data-tab="fechas-precios">Fechas y precios</button>
-                        <button class="tab-button" data-tab="vuelos">Vuelos</button>
-                        <button class="tab-button" data-tab="hoteles">Hoteles</button>
-                    </nav>
-                </div>
+                
 
                 
                 
