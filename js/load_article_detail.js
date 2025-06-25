@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                     <div class="sidebar-block actions">
-                    <button class="buy-button" 
+                        <button class="btn-primary add-to-cart-detail" 
                                 data-articulo-id="${articulo.id_articulo}"
                                 data-articulo-precio="${articulo.precio}">
                                 comprar
