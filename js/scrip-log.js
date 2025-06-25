@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const username = data.user.user_metadata.username || data.user.email; 
                 showMessage(`¡Inicio de sesión exitoso! Bienvenido, ${username}!`, 'success');
                 console.log('Usuario logueado:', data.user);
-                // window.location.href = 'dashboard.html'; 
+                window.location.href = 'index.html'; 
                 loginForm.reset();
             } else {
                 showMessage('No se pudo iniciar sesión. Verifica tus credenciales.', 'error');
