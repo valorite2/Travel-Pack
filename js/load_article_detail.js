@@ -1,12 +1,12 @@
 // js/load_article_detail.js
 
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+// ¡Importamos nuestra función centralizada!
+import { addToCart } from './cart.js'; 
 
 // Tus credenciales de Supabase
 const SUPABASE_URL = 'https://cywsonaxzsfixwtdazgm.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5d3NvbmF4enNmaXh3dGRhemdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk5MzE0MzksImV4cCI6MjA2NTUwNzQzOX0.yjYAW2Lvc_z3TdsGendoQXXu1Bj_3aZMGkJezCuY8Fo';
-
-// Inicializa el cliente Supabase
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -14,67 +14,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     const loadingMessage = document.getElementById('loading-message');
     const errorMessage = document.getElementById('error-message');
 
-    if (!articleDetailContainer) {
-        console.error("Contenedor de detalles de artículo no encontrado.");
-        return;
-    }
+    if (!articleDetailContainer) return;
 
-    // Mostrar mensaje de carga
     if (loadingMessage) loadingMessage.style.display = 'block';
-    if (errorMessage) errorMessage.style.display = 'none';
-    articleDetailContainer.innerHTML = ''; // Limpiar contenido previo
 
-    // 1. Obtener el ID del artículo de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const articuloId = urlParams.get('id');
 
     if (!articuloId) {
-        console.error("No se encontró el ID del artículo en la URL.");
         if (loadingMessage) loadingMessage.style.display = 'none';
         if (errorMessage) {
-            errorMessage.textContent = 'Error: No se ha especificado un artículo para mostrar.';
+            errorMessage.textContent = 'Error: No se ha especificado un artículo.';
             errorMessage.style.display = 'block';
         }
         return;
     }
 
-    // 2. Cargar los detalles del artículo desde Supabase
     try {
         const { data: articulo, error } = await supabase
             .from('articulo')
-            // ASEGÚRATE de que 'imagen_url' esté aquí y que sea el nombre exacto de tu columna
             .select('id_articulo, tipo_articulo, descripcion, fecha, precio, imagen_url')
             .eq('id_articulo', articuloId)
-            .single(); // Esperamos un solo resultado
+            .single();
 
-        // Ocultar mensaje de carga
         if (loadingMessage) loadingMessage.style.display = 'none';
+        if (error || !articulo) throw error || new Error('Artículo no encontrado.');
 
-        if (error) {
-            console.error('Error al cargar los detalles del artículo:', error);
-            if (errorMessage) {
-                errorMessage.textContent = 'Error al cargar el artículo. Por favor, intente de nuevo.';
-                errorMessage.style.display = 'block';
-            }
-            return;
-        }
-
-        if (!articulo) {
-            if (errorMessage) {
-                errorMessage.textContent = 'El artículo solicitado no fue encontrado.';
-                errorMessage.style.display = 'block';
-            }
-            return;
-        }
-
-        // 3. Renderizar los detalles del artículo en la página
         articleDetailContainer.innerHTML = `
-        <main class="package-detail-page">
-        <div class="container mx-auto px-4">
             <div class="detail-header">
                 <h1>${articulo.descripcion || 'Artículo sin título'}</h1>
             </div>
-
             <div class="package-content-wrapper">
                 <div class="package-main-content">
                     <img src="${articulo.imagen_url || 'img/placeholder.webp'}" alt="${articulo.descripcion || 'Imagen'}" class="main-image">
@@ -87,8 +56,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                 </div>
-
-                
                 
                 <aside class="package-sidebar">
                     <div class="sidebar-block date-selection">
