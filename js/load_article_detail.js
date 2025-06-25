@@ -78,11 +78,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                     <div class="sidebar-block actions">
+                    <div class="hotel-price-block">
                         <button class="btn-primary add-to-cart-detail" 
                                 data-articulo-id="${articulo.id_articulo}"
                                 data-articulo-precio="${articulo.precio}">
                                 comprar
                         </button>
+                        </div>
                         <a href="#" class="contact-button">Contáctenos</a>
                     </div>
                     <div class="sidebar-block payment-methods">
