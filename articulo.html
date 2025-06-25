@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del Artículo - TravelPro</title>
-    <link rel="stylesheet" href="css/style.css"> 
-    <link rel="stylesheet" href="css/style-sumar.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
+    <title>Conocé Varadero - TravelPro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-sumar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
     <link rel="shortcut icon" href="img/globe-solid.webp" />
-    <link rel="stylesheet" href="css/articulo-detalle.css"> 
+    <link rel="stylesheet" href="css/paquete-detalle.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
     <link rel="shortcut icon" href="img/globe-solid.webp" />
-
 </head>
 <body class="bg-gray-100">
     <header class="main-header">
@@ -54,26 +56,21 @@
         </nav>
     </header>
 
-        <main class="package-detail-page">
+    <main class="package-detail-page">
         <div class="container mx-auto px-4">
-                <div class="detail-header">
+            <div class="detail-header">
                 <h1>Conocé cancún. Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!
                 </h1>
                 <button class="share-button"><i class="fas fa-share-alt"></i></button>
             </div>
-        <div id="article-detail-container" class="package-detail-page">
-            <p>Cargando detalles del artículo...</p>
-        </div>
-        <div id="loading-message" style="display: none; text-align: center; margin-top: 20px;">
-            <p>Cargando...</p>
-        </div>
-        <div id="error-message" style="display: none; text-align: center; margin-top: 20px; color: red;">
-            <p>Error al cargar el artículo. Por favor, intente de nuevo.</p>
-        </div>
 
-        <div class="package-content-wrapper">
-        <div class="package-main-content">
-            <nav class="detail-tabs">
+            <div class="package-content-wrapper">
+                <div class="package-main-content">
+                    <div class="package-image-gallery">
+                        <img src="../img/Cancún.jpg" alt="cancun">
+                    </div>
+
+                    <nav class="detail-tabs">
                         <button class="tab-button active" data-tab="descripcion">Descripción</button>
                         <button class="tab-button" data-tab="fechas-precios">Fechas y precios</button>
                         <button class="tab-button" data-tab="vuelos">Vuelos</button>
@@ -84,7 +81,6 @@
                         <h2>Conocé cancún. Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de
                             viajar!</h2>
                         <p>Varadero: 10 noches Todo Incluido</p>
-                        <p>${articulo.descripcion || 'No hay descripción completa disponible.'}</p>
                         <ul>
                             <li><strong>Duración:</strong> 10 noches</li>
                             <li><strong>Destino:</strong> Varadero</li>
@@ -182,73 +178,139 @@
                             </div>
 
                             <div class="flight-hotel-summary">
+                                <p class="text-lg">Salida: <span class="font-bold">Sáb, 22/11/25</span></p>
+                                <p class="text-lg">Regreso: <span class="font-bold">Mar, 25/11/25</span></p>
+                                <span class="text-blue-700 font-semibold text-lg my-2">3 NOCHES</span>
+                                <p class="price-tag">$854.698</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="vuelos" class="tab-content">
-                        
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Vuelo seleccionado</h3>
+
                         <!-- Selected Flight Card - Mimicking imagen_2025-06-23_034245338.png -->
                         <div class="flight-card bg-blue-90 text-white shadow-lg">
                             <div class="p-4 flex justify-between items-center bg-blue-600 rounded-t-xl">
+                                <p class="text-lg font-semibold">Vuelo seleccionado</p>
                                 <!-- Price summary could go here too, but image has it on the right -->
                             </div>
                             <div class="p-4 bg-white text-gray-800">
                                 <!-- Outbound Flight -->
                                 <div class="flight-segment flex items-center py-4 border-b border-gray-200">
+                                    <i class="fas fa-plane-departure icon text-blue-500"></i>
                                     <div class="flex-1">
+                                        <p class="text-sm text-gray-600">IDA <span class="font-semibold">mar. 5 ago. 2025</span></p>
                                         <div class="flex items-center mt-2">
+                                            <input type="radio" name="flight-ida" class="form-radio text-blue-400 mr-2" checked>
+                                            <span class="font-semibold text-gray-700 mr-2">Flybondi</span>
+                                            <span class="flight-time font-bold text-xl mr-2">06:20</span>
+                                            <span class="flight-stops direct text-green-600 font-semibold text-sm mr-2">Directo</span>
+                                            <span class="flight-time font-bold text-xl mr-2">09:15</span>
+                                            <span class="flight-duration text-sm text-gray-600 mr-2">2 h 55 m</span>
                                             <div class="baggage-icons">
+                                                <i class="fas fa-suitcase text-gray-500"></i>
+                                                <i class="fas fa-luggage-cart text-gray-500"></i>
                                             </div>
                                         </div>
+                                        <p class="text-sm text-gray-500 ml-10">EZE Buenos Aires <span class="font-semibold">GIG Rio de Janeiro</span></p>
                                     </div>
                                     <div class="ml-auto text-gray-500 text-lg">
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                                 <!-- Return Flight -->
                                 <div class="flight-segment flex items-center py-4">
+                                    <i class="fas fa-plane-arrival icon text-purple-blue-500"></i>
                                     <div class="flex-1">
+                                        <p class="text-sm text-gray-600">VUELTA <span class="font-semibold">mié. 13 ago. 2025</span></p>
                                         <div class="flex items-center mt-2">
+                                            <input type="radio" name="flight-vuelta" class="form-radio text-blue-400 mr-2" checked>
+                                            <span class="font-semibold text-gray-700 mr-2">Flybondi</span>
+                                            <span class="flight-time font-bold text-xl mr-2">18:15</span>
+                                            <span class="flight-stops direct text-green-600 font-semibold text-sm mr-2">Directo</span>
+                                            <span class="flight-time font-bold text-xl mr-2">21:40</span>
+                                            <span class="flight-duration text-sm text-gray-600 mr-2">3 h 25 m</span>
                                             <div class="baggage-icons">
+                                                <i class="fas fa-suitcase text-gray-500"></i>
+                                                <i class="fas fa-luggage-cart text-gray-500"></i>
                                             </div>
                                         </div>
+                                        <p class="text-sm text-gray-500 ml-10">GIG Rio de Janeiro <span class="font-semibold">EZE Buenos Aires</span></p>
                                     </div>
                                     <div class="ml-auto text-gray-500 text-lg">
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                             </div>
                             <div class="p-4 bg-blue-600 text-white rounded-b-xl flex flex-col items-end">
+                                <p class="text-sm">Vuelo + Alojamiento</p>
+                                <p class="text-xs line-through text-gray-300">Precio con este vuelo $ 6.400.300</p>
                                 <div class="flex items-center mt-2">
+                                    <i class="fas fa-info-circle text-gray-300 mr-2"></i>
+                                    <span class="text-2xl font-bold">$ 463.772</span>
                                 </div>
+                                <p class="text-sm mt-1">Final 2 personas <span class="font-bold">$ 927.544</span></p>
+                                <p class="text-xs mt-1">Incluye Percepción RG5817</p>
+                                <button class="mt-4 bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-md transition duration-300">
+                                    Siguiente
+                                </button>
                             </div>
                         </div>
 
+                        <h3 class="text-2xl font-semibold my-6 text-gray-800">Otras opciones de vuelo</h3>
 
                         <!-- Example Flight Option Card - Mimicking imagen_2025-06-23_034153170.png -->
                         <div class="flight-card shadow-lg mb-6 border border-gray-200">
                             <div class="p-4 flex justify-between items-center bg-green-700 text-white rounded-t-xl">
+                                <p class="text-lg font-semibold">Vuelo seleccionado</p>
+                                <button class="bg-white text-green-700 font-semibold py-2 px-4 rounded-md">ELEGIR</button>
                             </div>
                             <div class="p-4 bg-white text-gray-800">
                                 <!-- Outbound Flight Segment -->
                                 <div class="flight-segment py-4 border-b border-gray-200">
+                                    <i class="fas fa-plane-departure icon text-green-700"></i>
                                     <div class="flex-1">
+                                        <p class="text-sm text-gray-600">IDA <span class="font-semibold">mar. 26 ago. 2025</span></p>
                                         <div class="flex items-center mt-2">
+                                            <img src="https://placehold.co/24x24/FFFFFF/000000?text=A" alt="Airline Logo" class="mr-2">
+                                            <span class="font-semibold text-gray-700 mr-2">Avianca Clase</span>
+                                            <span class="flight-time font-bold text-xl mr-2">01:40</span>
+                                            <span class="flight-stops text-blue-600 font-semibold text-sm mr-2">1 escala</span>
+                                            <span class="flight-time font-bold text-xl mr-2">10:40</span>
+                                            <span class="flight-duration text-sm text-gray-600 mr-2">10h 00min</span>
                                             <div class="baggage-icons">
+                                                <i class="fas fa-suitcase text-gray-500"></i>
+                                                <i class="fas fa-luggage-cart text-gray-500"></i>
                                             </div>
                                         </div>
+                                        <p class="text-sm text-gray-500 ml-10">EZE <span class="font-semibold">PUJ</span></p>
                                     </div>
                                     <div class="ml-auto text-gray-500 text-lg">
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                                 <!-- Return Flight Segment -->
                                 <div class="flight-segment py-4">
+                                    <i class="fas fa-plane-arrival icon text-green-700"></i>
                                     <div class="flex-1">
+                                        <p class="text-sm text-gray-600">VUELTA <span class="font-semibold">mar. 2 sep. 2025</span></p>
                                         <div class="flex items-center mt-2">
+                                            <img src="https://placehold.co/24x24/FFFFFF/000000?text=A" alt="Airline Logo" class="mr-2">
+                                            <span class="font-semibold text-gray-700 mr-2">Avianca Clase</span>
+                                            <span class="flight-time font-bold text-xl mr-2">14:10</span>
+                                            <span class="flight-stops text-blue-600 font-semibold text-sm mr-2">1 escala</span>
+                                            <span class="flight-time font-bold text-xl mr-2">01:25</span>
+                                            <span class="flight-duration text-sm text-gray-600 mr-2">10h 15min<span class="text-xs">+1</span></span>
                                             <div class="baggage-icons">
+                                                <i class="fas fa-suitcase text-gray-500"></i>
+                                                <i class="fas fa-luggage-cart text-gray-500"></i>
                                             </div>
                                         </div>
+                                        <p class="text-sm text-gray-500 ml-10">PUJ <span class="font-semibold">EZE</span></p>
                                     </div>
                                     <div class="ml-auto text-gray-500 text-lg">
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                             </div>
@@ -257,42 +319,84 @@
                         <!-- Another Flight Option Card -->
                         <div class="flight-card shadow-lg mb-6 border border-gray-200">
                             <div class="p-4 flex justify-between items-center bg-white text-gray-800 rounded-t-xl">
+                                <p class="text-lg font-semibold">Otras opciones</p>
                                 <div class="flex items-center">
+                                    <span class="text-red-500 text-xl font-bold mr-2">- U$S 98</span>
+                                    <button class="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-md">ELEGIR</button>
                                 </div>
                             </div>
                             <div class="p-4 bg-white text-gray-800">
                                 <!-- Outbound Flight Segment 1 -->
                                 <div class="flight-segment py-4 border-b border-gray-200">
+                                    <input type="radio" name="flight-option-1" class="form-radio text-teal-600 mr-2" checked>
+                                    <i class="fas fa-plane-departure icon text-teal-700"></i>
                                     <div class="flex-1">
+                                        <p class="text-sm text-gray-600">IDA <span class="font-semibold">mar. 26 ago. 2025</span></p>
                                         <div class="flex items-center mt-2">
+                                            <img src="https://placehold.co/24x24/FFFFFF/000000?text=A" alt="Airline Logo" class="mr-2">
+                                            <span class="font-semibold text-gray-700 mr-2">Avianca Clase</span>
+                                            <span class="flight-time font-bold text-xl mr-2">06:50</span>
+                                            <span class="flight-stops text-blue-600 font-semibold text-sm mr-2">1 escala</span>
+                                            <span class="flight-time font-bold text-xl mr-2">16:30</span>
+                                            <span class="flight-duration text-sm text-gray-600 mr-2">10h 40min</span>
                                             <div class="baggage-icons">
+                                                <i class="fas fa-suitcase text-gray-500"></i>
+                                                <i class="fas fa-luggage-cart text-gray-500"></i>
                                             </div>
                                         </div>
+                                        <p class="text-sm text-gray-500 ml-10">EZE <span class="font-semibold">PUJ</span></p>
                                     </div>
                                     <div class="ml-auto text-gray-500 text-lg">
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                                 <!-- Outbound Flight Segment 2 -->
                                 <div class="flight-segment py-4 border-b border-gray-200">
+                                    <input type="radio" name="flight-option-1" class="form-radio text-teal-600 mr-2">
+                                    <i class="fas fa-plane-departure icon text-teal-700"></i>
                                     <div class="flex-1">
                                         <div class="flex items-center mt-2">
+                                            <img src="https://placehold.co/24x24/FFFFFF/000000?text=A" alt="Airline Logo" class="mr-2">
+                                            <span class="font-semibold text-gray-700 mr-2">Avianca Clase</span>
+                                            <span class="flight-time font-bold text-xl mr-2">06:50</span>
+                                            <span class="flight-stops text-blue-600 font-semibold text-sm mr-2">1 escala</span>
+                                            <span class="flight-time font-bold text-xl mr-2">17:10</span>
+                                            <span class="flight-duration text-sm text-gray-600 mr-2">11h 20min</span>
                                             <div class="baggage-icons">
+                                                <i class="fas fa-suitcase text-gray-500"></i>
+                                                <i class="fas fa-luggage-cart text-gray-500"></i>
                                             </div>
                                         </div>
+                                        <p class="text-sm text-gray-500 ml-10">EZE <span class="font-semibold">PUJ</span></p>
                                     </div>
                                     <div class="ml-auto text-gray-500 text-lg">
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
-                                
+                                <button class="text-blue-500 hover:underline text-sm font-semibold mt-4">Ver más opciones de IDA</button>
+
                                 <!-- Return Flight Segment -->
                                 <div class="flight-segment py-4 border-t border-gray-200 mt-4">
+                                    <input type="radio" name="flight-option-return" class="form-radio text-teal-600 mr-2" checked>
+                                    <i class="fas fa-plane-arrival icon text-teal-700"></i>
                                     <div class="flex-1">
+                                        <p class="text-sm text-gray-600">VUELTA <span class="font-semibold">mar. 2 sep. 2025</span></p>
                                         <div class="flex items-center mt-2">
+                                            <img src="https://placehold.co/24x24/FFFFFF/000000?text=A" alt="Airline Logo" class="mr-2">
+                                            <span class="font-semibold text-gray-700 mr-2">Avianca Clase</span>
+                                            <span class="flight-time font-bold text-xl mr-2">14:10</span>
+                                            <span class="flight-stops text-blue-600 font-semibold text-sm mr-2">1 escala</span>
+                                            <span class="flight-time font-bold text-xl mr-2">01:25</span>
+                                            <span class="flight-duration text-sm text-gray-600 mr-2">10h 15min<span class="text-xs">+1</span></span>
                                             <div class="baggage-icons">
+                                                <i class="fas fa-suitcase text-gray-500"></i>
+                                                <i class="fas fa-luggage-cart text-gray-500"></i>
                                             </div>
                                         </div>
+                                        <p class="text-sm text-gray-500 ml-10">PUJ <span class="font-semibold">EZE</span></p>
                                     </div>
                                     <div class="ml-auto text-gray-500 text-lg">
+                                        <i class="fas fa-chevron-down"></i>
                                     </div>
                                 </div>
                             </div>
@@ -301,23 +405,43 @@
                     </div>
 
                     <div id="hoteles" class="tab-content">
-                        
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Hoteles disponibles</h3>
+
                         <!-- Hotel Card - Mimicking imagen_2025-06-23_034448548.png -->
                         <div class="hotel-card mb-6">
                             <div class="hotel-image-carousel">
+                                <span class="tag">Desayuno buffet</span>
+                                <img src="https://placehold.co/600x400/80B3FF/FFFFFF?text=Hotel+Room" alt="Hotel Room">
+                                <button class="carousel-nav-btn left"><i class="fas fa-chevron-left"></i></button>
+                                <button class="carousel-nav-btn right"><i class="fas fa-chevron-right"></i></button>
                             </div>
                             <div class="hotel-info">
                                 <div class="hotel-info-top">
+                                    <h4 class="text-orange-500"><i class="fas fa-star mr-2"></i>Olinda Rio Hotel</h4>
+                                    <p>Rio de Janeiro, Copacabana. A 7,93 km del centro. <a href="#" class="text-blue-500 hover:underline">Ver en mapa</a></p>
                                     <div class="rating">
+                                        <span class="text-green-600 font-bold">8.5</span>
                                         <div class="stars text-orange-400">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                                         </div>
+                                        <i class="fas fa-snowflake text-blue-400"></i> <!-- Example icon -->
+                                        <i class="fas fa-wifi text-blue-400"></i> <!-- Example icon -->
                                     </div>
                                     <div class="hotel-badges">
+                                        <span class="hotel-badge bg-blue-100 text-blue-800"><i class="fas fa-calendar-check mr-1"></i>Reserva flexible</span>
+                                        <span class="hotel-badge bg-green-100 text-green-800"><i class="fas fa-heart mr-1"></i>Elegido por parejas</span>
                                     </div>
                                 </div>
                                 <div class="hotel-price-block">
+                                    <span class="discount">Ahorrá $158.638</span>
+                                    <p class="old-price">Vuelo + Alojamiento Precio final por persona <span class="line-through">$1.002.266</span></p>
                                     <div class="flex items-center justify-end mb-2">
+                                        <i class="fas fa-info-circle text-gray-400 text-sm mr-2"></i>
+                                        <span class="new-price">$922.947</span>
                                     </div>
+                                    <p class="total-price-small">Final 2 personas <span class="font-bold">$1.845.894</span></p>
+                                    <p class="total-price-small">Incluye Percepción RG5817</p>
+                                    <button class="hotel-detail-button">Ver detalle</button>
                                 </div>
                             </div>
                         </div>
@@ -325,17 +449,72 @@
                     </div>
 
                     <section class="policies-section">
-                        
+                        <h3>Políticas de cancelación</h3>
+                        <p>El pasajero puede desistir de los servicios contratados. Se aplicará la siguiente
+                            penalización:</p>
+                        <ul>
+                            <li>Las mismas están sujetas a las condiciones exigidas generalmente por la líneas aéreas.
+                                En caso de cancelación de los servicios contratados entre los 25 y 25 días de la fecha
+                                de la salida se retendrá el 10% del servicio contratado por concepto de gastos, para
+                                las cancelaciones hechas entre los 24 y 15 días la salida se retendrá el 50%, para
+                                aquellas que se realicen entre los 15 días previos a la partida se retendrá al 100%.
+                            </li>
+                        </ul>
+
+                        <h3>Legales</h3>
+                        <p>KZBRF: Nuestros precios incluyen: Alojamiento en los hoteles mencionados o similares.
+                            Ocupando habitaciones con baño privado e impuestos incluidos, excepto tasas locales de
+                            alojamiento pagaderas exclusivamente en destino. Régimen de comidas según se indica en cada
+                            uno de los circuitos y programas. Visitas y excursiones mencionadas. Traslados a
+                            aeropuertos terminales y hoteles cuando se indique, incluyendo manejo de equipajes, cuando
+                            se encuentre debidamente especificado.</p>
+                        <p>EVT: TC 4 Travel SA</p>
+                        <p>Legajo: 18409</p>
+                        <p>Cuit: 30-71716082-2</p>
                     </section>
 
                 </div>
 
+                <aside class="package-sidebar">
+                    <div class="sidebar-block date-selection">
+                        <p><i class="fas fa-calendar-alt"></i> Salida: Jue 10/07/25 - Regreso: Dom 20/07/25</p>
+                        <p><i class="fas fa-users"></i> 2 pasajeros, 1 habitación</p>
+                    </div>
+                    <div class="sidebar-block price-summary">
+                        <div class="price-item">
+                            <span>Precio por persona</span>
+                            <span class="value">$2.131.937</span>
+                        </div>
+                        <div class="price-item total-price">
+                            <span>Precio total para 2 personas <i class="fas fa-info-circle"
+                                    title="Basado en ocupación doble"></i></span>
+                            <span class="value">$4.263.874</span>
+                        </div>
+                        <div class="currency-conversion">
+                            <span>USD $3.568</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-block actions">
+                        <a href="#" class="buy-button">Comprar</a>
+                        <a href="#" class="contact-button">Contáctenos</a>
+                    </div>
+                    <div class="sidebar-block payment-methods">
+                        <h4>Formas de pago</h4>
+                        <ul class="payment-list">
+                            <li><i class="fas fa-check-circle"></i> Tarjeta de crédito</li>
+                            <li><i class="fas fa-check-circle"></i> Tarjeta de débito</li>
+                            <li><i class="fas fa-check-circle"></i> Dos tarjetas</li>
+                            <li><i class="fas fa-check-circle"></i> Transferencia / Depósito</li>
+                            <li><i class="fas fa-check-circle"></i> Múltiples medios (pago offline)</li>
+                            <li><i class="fas fa-check-circle"></i> Pago en dólares</li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
         </div>
     </main>
-  
 
-        <footer id="contacto" class="footer">
+    <footer id="contacto" class="footer">
         <div class="container mx-auto px-4">
             <div class="footer-content">
                 <div class="footer-section">
@@ -383,8 +562,8 @@
         </div>
     </footer>
 
-    <script src="/js/scrip.js"></script>
-    <script src="js/sumarC.js"></script>
-    <script type="module" src="js/load_article_detail.js"></script> 
+    <script src="../js/sumarC.js">
+
+    </script>
 </body>
 </html>
