@@ -54,15 +54,24 @@
         </nav>
     </header>
 
-    <main class="package-detail-page">
+        <main class="package-detail-page">
         <div class="container mx-auto px-4">
-            <div class="detail-header">
-                <h1>Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!
+                <div class="detail-header">
+                <h1>Conocé cancún. Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!
                 </h1>
                 <button class="share-button"><i class="fas fa-share-alt"></i></button>
             </div>
+        <div id="article-detail-container" class="package-detail-page">
+            <p>Cargando detalles del artículo...</p>
+        </div>
+        <div id="loading-message" style="display: none; text-align: center; margin-top: 20px;">
+            <p>Cargando...</p>
+        </div>
+        <div id="error-message" style="display: none; text-align: center; margin-top: 20px; color: red;">
+            <p>Error al cargar el artículo. Por favor, intente de nuevo.</p>
+        </div>
 
-            <div class="package-content-wrapper">
+        <div class="package-content-wrapper">
                 <div class="package-main-content">
 
                     <nav class="detail-tabs">
@@ -463,6 +472,7 @@
             </div>
         </div>
     </main>
+
   
 
         <footer id="contacto" class="footer">
