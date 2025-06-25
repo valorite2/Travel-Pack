@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                     <div class="sidebar-block actions">
-                    <div class="hotel-price-block">
+                    <div class="package-details">
                        <button class="btn-cart" data-articulo-id="${articulo.id_articulo}" data-articulo-precio="${articulo.precio}">Agregar al carrito</button>
                         </div>
                         <a href="#" class="contact-button">Contáctenos</a>
