@@ -1,40 +1,28 @@
-<!DOCTYPE html>More actions
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del Artículo - TravelPro</title>
-    <link rel="stylesheet" href="css/style.css"> 
-    <link rel="stylesheet" href="css/style-sumar.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
-    <link rel="shortcut icon" href="img/globe-solid.webp" />
-    <link rel="stylesheet" href="css/articulo-detalle.css"> 
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Tu Viaje Ideal</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=travel" />
     <!-- Icono App -->
     <link rel="shortcut icon" href="img/globe-solid.webp" />
-
     <link rel="apple-touch-icon" href="img/globe-solid.webp">
 </head>
-<body class="bg-gray-100">
 
 <body>
     <header class="main-header">
         <nav>
             <div class="nav-container">
-                <a href="../index.html" class="nav-brand">
                 <a href="#" class="nav-brand">
                     <i class="fa-solid fa-globe"></i>
                     <span>TravelPro</span>
                 </a>
                 <div class="nav-right">
-                    <a class="nav-button" href="../login.html"> Mi Cuenta</a>
                     <a class="nav-button" href="login.html"> Mi Cuenta</a>
 
 
@@ -42,7 +30,12 @@
                     <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-@@ -37,6 +39,7 @@
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-links">
+                    <div class="shorcuts">
                         <i class="fa-solid fa-plane"></i>
                         <a href="#">Vuelos</a>
                     </div>
@@ -50,7 +43,12 @@
                     <div class="shorcuts">
                         <i class="fa-solid fa-car"></i>
                         <a href="#"> Autos</a>
-@@ -49,40 +52,108 @@
+                    </div>
+                    <div class="shorcuts">
+                        <i class="fa-solid fa-hotel"></i>
+                        <a href="#"> Hoteles</a>
+                    </div>
+                    <div class="shorcuts">
                         <i class="fa-solid fa-ticket"></i>
                         <a href="#"> Pasajes</a>
                     </div>
@@ -64,12 +62,6 @@
         </nav>
     </header>
 
-        <main class="package-detail-page">
-        <div class="container mx-auto px-4">
-                <div class="detail-header">
-                <h1>Conocé cancún. Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!
-                </h1>
-                <button class="share-button"><i class="fas fa-share-alt"></i></button>
 
     <main class="hero-section">
         <div class="container">
@@ -92,14 +84,7 @@
                     </div>
                 </div>
             </div>
-        <div id="article-detail-container" class="package-detail-page">
-            <p>Cargando detalles del artículo...</p>
         </div>
-        <div id="loading-message" style="display: none; text-align: center; margin-top: 20px;">
-            <p>Cargando...</p>
-        </div>
-        <div id="error-message" style="display: none; text-align: center; margin-top: 20px; color: red;">
-            <p>Error al cargar el artículo. Por favor, intente de nuevo.</p>
     </main>
 
 
@@ -147,9 +132,6 @@
                     <p>Protege tu inversión con nuestros seguros de viaje completos.</p>
                 </div>
 
-        <div class="package-content-wrapper">
-        <div class="package-main-content">
-        
                 <div class="service-card">
                     <div class="service-icon teal">
                         <i class="fas fa-headphones"></i>
@@ -167,25 +149,57 @@
                 </div>
             </div>
         </div>
-    </main>
-  
     </section>
 
 
-        <footer id="contacto" class="footer">
-        <div class="container mx-auto px-4">
     <footer id="contacto" class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-brand">
-@@ -129,8 +200,51 @@ <h4>Contacto</h4>
+                        <i class="fas fa-globe"></i>
+                        <span>Travel Pack</span>
+                    </div>
+                    <p>Tu compañero de confianza para descubrir el mundo. Creamos experiencias únicas que duran toda la
+                        vida.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#paquetes">Paquetes Turísticos</a></li>
+                        <li><a href="#servicios">Vuelos</a></li>
+                        <li><a href="#servicios">Hoteles</a></li>
+                        <li><a href="#servicios">Alquiler de Autos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Atención al Cliente</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@Travel Pack.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Travel St, Ciudad</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Travel Pack. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="/js/scrip.js"></script>
-    <script src="js/sumarC.js"></script>
-    <script type="module" src="js/load_article_detail.js"></script> 
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close-button" id="close-modal-btn">&times;</span>
