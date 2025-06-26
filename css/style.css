@@ -390,7 +390,7 @@ nav .nav-container {
 
 .package-card {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 15px;
     /* Ligeramente más pequeños que los 10px anteriores */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Sombra más sutil */
