@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         articleDetailContainer.innerHTML = `
             <div class="detail-header">
-                <h1>Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!<button class="share-button"><i class="fas fa-share-alt"></i></button><br>${articulo.descripcion || 'Artículo sin título'}</h1>
+                <h1>Conocé cancún. Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!</h1>
+                <button class="share-button"><i class="fas fa-share-alt"></i></button>
+                <h1>${articulo.descripcion || 'Artículo sin título'}</h1>
             </div>
             <div class="package-content-wrapper">
                 <div class="package-main-content">
@@ -80,8 +82,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="sidebar-block actions">
                     <div class="package-details">
                        <button class="btn-cart" data-articulo-id="${articulo.id_articulo}" data-articulo-precio="${articulo.precio}">Agregar al carrito</button>
+                       <a href="#" class="contact-button">Contáctenos</a>
                         </div>
-                        <a href="#" class="contact-button">Contáctenos</a>
+                        
                     </div>
                     <div class="sidebar-block payment-methods">
                         <h4>Formas de pago</h4>
