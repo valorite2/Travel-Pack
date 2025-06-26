@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="sidebar-block price-summary">
                         <div class="price-item">
                             <span>Precio por persona</span>
-                            <span class="value">$${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}</span>
+                            <span class="value">$`$${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}`</span>
                         </div>
                         <div class="price-item total-price">
                             <span>Precio total para 2 personas <i class="fas fa-info-circle"
