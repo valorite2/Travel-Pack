@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Ayuda - Travel Pack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .faq-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+        }
+        .faq-item h3 {
+            font-size: 1.25em; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+        }
+        .faq-item p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav>
+            <div class="nav-container">
+                <a href="#" class="nav-brand">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>TravelPro</span>
+                </a>
+                <div class="nav-right">
+                    <a class="nav-button" href="login.html"> Mi Cuenta</a>
+
+
+
+                    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav-links">
+                    <div class="shorcuts">
+                        <a href="../index.html"><i class="fa-solid fa-plane"></i>
+                         Vuelos</a>
+                    </div>
+
+                    <div class="shorcuts">
+                        <a href="../index.html"><i class="fa-solid fa-car"></i>
+                         Autos</a>
+                    </div>
+                    <div class="shorcuts">
+                        <a href="../index.html"><i class="fa-solid fa-hotel"></i>
+                         Hoteles</a>
+                    </div>
+                    <div class="shorcuts">
+                        <a href="../index.html"><i class="fa-solid fa-ticket"></i>
+                         Pasajes</a>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="py-10">
+        <div class="container bg-white p-8 rounded-lg shadow-md">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Centro de Ayuda de TravelPro</h1>
+            <p class="text-gray-700 leading-relaxed mb-8 text-center">
+                Bienvenido a nuestro Centro de Ayuda, tu recurso principal para resolver dudas y obtener asistencia
+                sobre tus viajes. Aquí encontrarás respuestas a las preguntas más frecuentes sobre la compra de
+                paquetes turísticos, vuelos, hoteles, alquiler de autos y más.
+            </p>
+
+            <div class="space-y-6">
+                <section class="faq-section">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Reservas y Pagos</h2>
+                    <div class="faq-item">
+                        <h3>¿Cómo realizo una reserva en TravelPro?</h3>
+                        <p>
+                            Puedes realizar una reserva navegando por nuestros paquetes turísticos, vuelos, hoteles
+                            o alquiler de autos. Una vez que encuentres la opción deseada, haz clic en "Ver detalle"
+                            o "Seleccionar" y sigue los pasos para ingresar tus datos personales y de pago.
+                            Recibirás una confirmación por correo electrónico.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Qué métodos de pago aceptan?</h3>
+                        <p>
+                            Aceptamos tarjetas de crédito (Visa, Mastercard, American Express), tarjetas de débito,
+                            transferencias bancarias y la opción de pagar con dos tarjetas. También ofrecemos la
+                            posibilidad de pago offline para múltiples medios.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Puedo pagar en cuotas?</h3>
+                        <p>
+                            Sí, muchos de nuestros paquetes y servicios permiten el pago en cuotas. Las opciones
+                            de financiación varían según el banco y el proveedor del servicio. Consulta las
+                            condiciones específicas al momento de la reserva.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Mis datos de pago están seguros?</h3>
+                        <p>
+                            Sí, utilizamos sistemas de procesamiento de pagos seguros y cifrado SSL para proteger
+                            su información financiera. Sus datos sensibles no son almacenados directamente en
+                            nuestros servidores.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="faq-section">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Cambios y Cancelaciones</h2>
+                    <div class="faq-item">
+                        <h3>¿Cómo puedo cambiar o cancelar mi reserva?</h3>
+                        <p>
+                            Las políticas de cambio y cancelación varían según el tipo de servicio (vuelo, hotel,
+                            paquete) y el proveedor. Te recomendamos revisar los términos y condiciones de tu
+                            reserva específica. Para iniciar un cambio o cancelación, contacta a nuestro equipo
+                            de Atención al Cliente.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Hay penalidades por cambios o cancelaciones?</h3>
+                        <p>
+                            Sí, es posible que se apliquen cargos o penalidades según las políticas de la aerolínea,
+                            hotel o tour operador, y el tiempo de anticipación con el que se solicite el cambio/cancelación.
+                            Nuestra política general es: hasta 25 días antes de la salida, se retiene el 10%; entre 24 y 15 días, el 50%;
+                            y menos de 15 días, el 100%. Sin embargo, verifica siempre los términos de tu reserva.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="faq-section">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Información General de Viaje</h2>
+                    <div class="faq-item">
+                        <h3>¿Necesito visa para mi destino?</h3>
+                        <p>
+                            La necesidad de visa depende de tu nacionalidad y del destino. En la descripción de
+                            algunos paquetes se especifica si la visa está incluida. Te recomendamos verificar
+                            siempre los requisitos de entrada del país de destino con antelación.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Qué equipaje está incluido en mi vuelo?</h3>
+                        <p>
+                            La franquicia de equipaje varía según la aerolínea y la tarifa de tu vuelo. En los
+                            detalles de tu vuelo se indicará si incluye equipaje de bodega, de mano o ambos.
+                            Siempre consulta esta información antes de viajar para evitar cargos adicionales.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Qué es la asistencia al viajero?</h3>
+                        <p>
+                            La asistencia al viajero es un servicio que te brinda cobertura ante imprevistos
+                            durante tu viaje, como emergencias médicas, pérdida de equipaje, o cancelaciones
+                            inesperadas. Muchos de nuestros paquetes la incluyen, pero siempre puedes añadirla
+                            o mejorarla.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="faq-section">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Contacta con Nosotros</h2>
+                    <p class="text-gray-700">
+                        Si no encuentras la respuesta a tu pregunta en este Centro de Ayuda, por favor,
+                        no dudes en contactar a nuestro equipo de Atención al Cliente para asistencia personalizada.
+                    </p>
+                    <p class="mt-4 text-gray-700">
+                        <i class="fas fa-phone mr-2 text-blue-500"></i> Teléfono: <a href="tel:+15551234567" class="text-blue-600 hover:underline">+1 (555) 123-4567</a>
+                    </p>
+                    <p class="text-gray-700">
+                        <i class="fas fa-envelope mr-2 text-blue-500"></i> Correo Electrónico: <a href="mailto:info@TravelPack.com" class="text-blue-600 hover:underline">info@TravelPack.com</a>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-globe"></i>
+                        <span>Travel Pack</span>
+                    </div>
+                    <p>Tu compañero de confianza para descubrir el mundo. Creamos experiencias únicas que duran toda la
+                        vida.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#paquetes">Paquetes Turísticos</a></li>
+                        <li><a href="#servicios">Vuelos</a></li>
+                        <li><a href="#servicios">Hoteles</a></li>
+                        <li><a href="#servicios">Alquiler de Autos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="footer/centro-de-ayuda.html">Centro de Ayuda</a></li>
+                        <li><a href="footer/terminos-condiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="footer/politica-privacidad.html">Política de Privacidad</a></li>
+                        <li><a href="footer/atencion-cliente.html">Atención al Cliente</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +54 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@Travel Pack.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Travel St, Ciudad</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Travel Pack. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
