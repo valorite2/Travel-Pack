@@ -57,6 +57,7 @@ nav .nav-container {
     flex-wrap: wrap;
     background-color: #1E40AF;
     height: 7vh;
+    padding: 0px 30px;
 }
 
 .nav-brand {
