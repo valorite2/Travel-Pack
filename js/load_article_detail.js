@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                 </div>
-                
                 <aside class="package-sidebar">
                     <div class="sidebar-block date-selection">
                         <p><i class="fas fa-calendar-alt"></i> fecha: ${articulo.fecha || 'N/A'}</p>
@@ -82,9 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="sidebar-block actions">
                     <div class="package-details">
                        <button class="btn-cart" data-articulo-id="${articulo.id_articulo}" data-articulo-precio="${articulo.precio}">Agregar al carrito</button>
-                       <a href="#" class="contact-button">Contáctenos</a>
                         </div>
-                        
                     </div>
                     <div class="sidebar-block payment-methods">
                         <h4>Formas de pago</h4>
