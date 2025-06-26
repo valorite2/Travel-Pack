@@ -2,7 +2,7 @@
 
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 // ¡Importamos nuestra función centralizada para añadir al carrito!
-import { addToCart } from './cart.js'; 
+import { addToCart } from './cart.js';
 
 // Tus credenciales de Supabase
 const SUPABASE_URL = 'https://cywsonaxzsfixwtdazgm.supabase.co';
@@ -60,7 +60,7 @@ async function loadArticles(offset, limit) {
                     window.location.href = `articulo.html?id=${articulo.id_articulo}`;
                 }
             });
-            
+
             const precioFormateado = articulo.precio ? articulo.precio.toFixed(2) : 'N/A';
 
             articleCard.innerHTML = `
@@ -114,10 +114,52 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const button = event.target;
                 const articuloId = button.dataset.articuloId;
                 const articuloPrecio = parseFloat(button.dataset.articuloPrecio);
-                
+
                 // ¡Llamamos a la función centralizada!
                 await addToCart(articuloId, articuloPrecio);
             }
         });
     }
 });
+
+async function buscar() {
+    const origen = document.getElementById("origen").value.trim();
+    const destino = document.getElementById("destino").value.trim().toLowerCase();
+    const entrada = document.getElementById("fecha-entrada").value;
+    const salida = document.getElementById("fecha-salida").value;
+
+    try {
+        const { data, error } = await supabase
+            .from('articulo')
+            .select('*')
+            .gte('fecha', entrada)
+            .lte('fecha', salida);
+
+        if (error) {
+            console.error('Error al obtener datos:', error);
+            alert('Ocurrió un error al buscar los paquetes.');
+            return;
+        }
+
+        // 🔍 Filtrado por coincidencia textual (en el cliente)
+        const filtrados = data.filter(articulo =>
+            (articulo.descripcion?.toLowerCase().includes(destino) || 
+             articulo.tipo_articulo?.toLowerCase().includes(destino))
+        );
+
+        // Guardar datos filtrados
+        sessionStorage.setItem('resultados', JSON.stringify(filtrados));
+        sessionStorage.setItem('origen', origen);
+        sessionStorage.setItem('destino', destino);
+        sessionStorage.setItem('entrada', entrada);
+        sessionStorage.setItem('salida', salida);
+
+        // Redirigir a la página de resultados
+        window.location.href = 'resultados.html';
+
+    } catch (err) {
+        console.error('Error inesperado:', err);
+        alert('Error inesperado.');
+    }
+}
+window.buscar = buscar;

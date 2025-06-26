@@ -457,6 +457,22 @@ nav .nav-container {
 
 /* Eliminamos .price-overlay ya que no lo usaremos */
 
+#resultados-container{
+    display: flex;
+    /* Usamos flexbox para el layout */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas se envuelvan a la siguiente línea */
+    gap: 20px;
+    /* Espacio entre las tarjetas */
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
+    width: 90%;
+    /* Ancho del contenedor */
+    max-width: 1300px;
+    /* Ancho máximo para el layout de 4 columnas */
+    margin: 0 auto;
+    /* Centra el contenedor */
+}
 .package-details {
     padding: 15px;
     /* Ajustado de 16px */
@@ -464,6 +480,7 @@ nav .nav-container {
     flex-direction: column;
     flex: 1;
     /* Permite que esta sección se expanda para llenar el espacio restante */
+    justify-content: space-between;
 }
 
 .package-info {

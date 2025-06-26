@@ -21,24 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Opcional: Cerrar el menú al hacer clic en un enlace (útil en SPA o secciones)
-        navList.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) { // Solo si estamos en vista móvil
-                    navList.classList.remove('active');
-                    const icon = navToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                    navToggle.setAttribute('aria-label', 'Abrir menú');
-                }
-            });
-        });
+
     }
 
-
+/*
     // Cuadro del buscador (Tu función original)
     // Esta función `buscar` se llama desde el HTML con `onclick="buscar()"`
-    window.buscar = function() { // Hacemos `buscar` global para que sea accesible desde onclick
+    window.buscar = function () { // Hacemos `buscar` global para que sea accesible desde onclick
         const origen = document.getElementById("origen").value;
         const destino = document.getElementById("destino").value;
         const entrada = document.getElementById("fecha-entrada").value;
@@ -46,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         alert(`Buscando paquetes de ${origen} a ${destino} del ${entrada} al ${salida}`);
     }
+        */
 
 
     // Ver más tarjetas

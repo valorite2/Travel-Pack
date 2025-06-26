@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<style>
+    h1 {
+        color: black;
+        text-align: center;
+        margin: 20px;
+
+    }
+</style>
+
+<body>
+
+    <h1>Resultados de búsqueda</h1>
+    <div id="resultados-container" class="articles-grid">
+    </div>
+
+    <script type="module">
+        const resultados = JSON.parse(sessionStorage.getItem('resultados')) || [];
+        const container = document.getElementById('resultados-container');
+
+        if (!resultados.length) {
+            container.innerHTML = '<p>No se encontraron resultados para esta búsqueda.</p>';
+        } else {
+            resultados.forEach(articulo => {
+                const card = document.createElement('div');
+                card.classList.add('package-card');
+                card.dataset.articuloId = articulo.id_articulo;
+                card.style.cursor = 'pointer';
+
+                const precioFormateado = articulo.precio ? articulo.precio.toFixed(2) : 'N/A';
+
+                card.innerHTML = `
+          <div class="image-container">
+              <img src="${articulo.imagen_url || 'img/placeholder.webp'}" alt="${articulo.tipo_articulo || 'Artículo'}">
+              <div class="price-overlay">$${precioFormateado}</div>
+          </div>
+          <div class="package-details">
+              <div class="package-info">
+                  <div class="package-type">${(articulo.tipo_articulo || 'Artículo').toUpperCase()}</div>
+                  <h3 class="package-title">${articulo.descripcion || 'Artículo sin título'}</h3>
+                  <p class="departure">Fecha: ${articulo.fecha || 'N/A'}</p>
+                  <p class="price-details">Precio por unidad: $${precioFormateado}</p>
+              </div>
+              <div class="price-info">
+                  <button class="view-package" data-articulo-id="${articulo.id_articulo}" data-articulo-precio="${articulo.precio}">
+                    Agregar al carrito
+                  </button>
+              </div>
+          </div>
+        `;
+
+                card.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('view-package')) {
+                        window.location.href = `articulo.html?id=${articulo.id_articulo}`;
+                    }
+                });
+
+                container.appendChild(card);
+            });
+
+            // Delegación para los botones
+            container.addEventListener('click', async (event) => {
+                if (event.target.classList.contains('view-package')) {
+                    event.stopPropagation();
+                    const btn = event.target;
+                    const articuloId = btn.dataset.articuloId;
+                    const precio = parseFloat(btn.dataset.articuloPrecio);
+                    const { addToCart } = await import('./cart.js');
+                    await addToCart(articuloId, precio);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
