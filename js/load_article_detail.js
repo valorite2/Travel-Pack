@@ -42,9 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const articuloId = urlParams.get('id');
 
-    const divisor=2;
 
-    const textoPrecioConDivision = `${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}`;
 
     if (!articuloId) {
 
@@ -85,69 +83,133 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
         articleDetailContainer.innerHTML = `
-        <div class="detail-header">
-                        <h1>${articulo.descripcion || 'Artículo sin título'}</h1>
-                    </div>
-                    <div class="package-content-wrapper">
-                        <div class="package-main-content">
-                            <img src="${articulo.imagen_url || 'img/placeholder.webp'}" alt="${articulo.descripcion || 'Imagen'}" class="main-image">
-                            <div class="detail-info">
-                                <p><strong>Tipo:</strong> ${articulo.tipo_articulo ? articulo.tipo_articulo.toUpperCase() : 'N/A'}</p>
-                                <p><strong>Fecha:</strong> ${articulo.fecha || 'N/A'}</p>
-                                <div class="full-description">
-                                    <h3>Descripción</h3>
-                                    <p>${articulo.descripcion || 'No hay descripción disponible.'}</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <aside class="package-sidebar">
-                            <div class="sidebar-block date-selection">
-                                <p><i class="fas fa-calendar-alt"></i> fecha: ${articulo.fecha || 'N/A'}</p>
-                                <p><i class="fas fa-users"></i> 2 pasajeros, 1 habitación</p>
-                                <p>${articulo.descripcion || 'No hay descripción completa disponible.'}</p>
-                            </div>
-                            <div class="sidebar-block price-summary">
-                                <div class="price-item">
-                                    <span>Precio por persona</span>
-                                    <span class="value">$${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}</span>
-                                </div>
-                                <div class="price-item total-price">
-                                    <span>Precio total para 2 personas <i class="fas fa-info-circle"
-                                            title="Basado en ocupación doble"></i></span>
-                                    <span class="value">$${articulo.precio ? (articulo.precio * 2).toFixed(2) : 'N/A'}</span>
-                                </div>
-                                <div class="currency-conversion">
-                                    <span>USD $${articulo.precio ? (articulo.precio / 1000).toFixed(2) : 'N/A'}</span>
-                                </div>
-                            </div>
-                            <div class="sidebar-block actions">
-                            <div class="package-details">
-                               <button class="btn-cart" data-articulo-id="${articulo.id_articulo}" data-articulo-precio="${articulo.precio}">Agregar al carrito</button>
-                                </div>
-                                <a href="#" class="contact-button">Contáctenos</a>
-                            </div>
-                            <div class="sidebar-block payment-methods">
-                                <h4>Formas de pago</h4>
-                                <ul class="payment-list">
-                                    <li><i class="fas fa-check-circle"></i> Tarjeta de crédito</li>
-                                    <li><i class="fas fa-check-circle"></i> Tarjeta de débito</li>
-                                    <li><i class="fas fa-check-circle"></i> Dos tarjetas</li>
-                                    <li><i class="fas fa-check-circle"></i> Transferencia / Depósito</li>
-                                    <li><i class="fas fa-check-circle"></i> Múltiples medios (pago offline)</li>
-                                    <li><i class="fas fa-check-circle"></i> Pago en dólares</li>
-                                </ul>
-                            </div>
-                        </aside>
-                    </div>
+
+            <div class="detail-header">
+
+                <h1>${articulo.descripcion || 'Artículo sin título'}</h1>
+
+            </div>
+
+            <div class="package-content-wrapper">
+
+                <div class="package-main-content">
+
+                    <img src="${articulo.imagen_url || 'img/placeholder.webp'}" alt="${articulo.descripcion || 'Imagen'}" class="main-image">
+
+                    <div class="detail-info">
+
+                        <p><strong>Tipo:</strong> ${articulo.tipo_articulo ? articulo.tipo_articulo.toUpperCase() : 'N/A'}</p>
+
+                        <p><strong>Fecha:</strong> ${articulo.fecha || 'N/A'}</p>
+
+                        <div class="full-description">
+
+                            <h3>Descripción</h3>
+
+                            <p>${articulo.descripcion || 'No hay descripción disponible.'}</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+
+                <aside class="package-sidebar">
+
+                    <div class="sidebar-block date-selection">
+
+                        <p><i class="fas fa-calendar-alt"></i> fecha: ${articulo.fecha || 'N/A'}</p>
+
+                        <p><i class="fas fa-users"></i> 2 pasajeros, 1 habitación</p>
+
+                        <p>${articulo.descripcion || 'No hay descripción completa disponible.'}</p>
+
+                    </div>
+
+                    <div class="sidebar-block price-summary">
+
+                        <div class="price-item">
+
+                            <span>Precio por persona</span>
+
+                            <span class="value">$</span>
+
+                        </div>
+
+                        <div class="price-item total-price">
+
+                            <span>Precio total para 2 personas <i class="fas fa-info-circle"
+
+                                    title="Basado en ocupación doble"></i></span>
+
+                            <span class="value"> $${articulo.precio ? articulo.precio.toFixed(2) : 'N/A'}</span>
+
+                        </div>
+
+                        <div class="currency-conversion">
+
+                            <span>USD $${articulo.precio ? articulo.precio.toFixed(2) : 'N/A'}</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="sidebar-block actions">
+
+                    <div class="package-details">
+
+                       <button class="btn-cart" data-articulo-id="${articulo.id_articulo}" data-articulo-precio="${articulo.precio}">Agregar al carrito</button>
+
+                        </div>
+
+                        <a href="#" class="contact-button">Contáctenos</a>
+
+                    </div>
+
+                    <div class="sidebar-block payment-methods">
+
+                        <h4>Formas de pago</h4>
+
+                        <ul class="payment-list">
+
+                            <li><i class="fas fa-check-circle"></i> Tarjeta de crédito</li>
+
+                            <li><i class="fas fa-check-circle"></i> Tarjeta de débito</li>
+
+                            <li><i class="fas fa-check-circle"></i> Dos tarjetas</li>
+
+                            <li><i class="fas fa-check-circle"></i> Transferencia / Depósito</li>
+
+                            <li><i class="fas fa-check-circle"></i> Múltiples medios (pago offline)</li>
+
+                            <li><i class="fas fa-check-circle"></i> Pago en dólares</li>
+
+                        </ul>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
         `;
 
+
+
         setTimeout(() => {
+
             const addToCartBtn = document.querySelector('.btn-cart');
 
+
+
             if (addToCartBtn) {
+
                 addToCartBtn.addEventListener('click', async () => {
+
                     const articuloId = addToCartBtn.dataset.articuloId;
+
                     const articuloPrecio = parseFloat(addToCartBtn.dataset.articuloPrecio);
 
 
@@ -155,6 +217,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     // ¡Llamamos a la función centralizada para añadir al carrito!
 
                     await addToCart(articuloId, articuloPrecio);
+
                 });
 
             } else {
@@ -186,6 +249,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
 });
-
-
-
