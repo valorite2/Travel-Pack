@@ -42,7 +42,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         articleDetailContainer.innerHTML = `
             <div class="detail-header">
-                <h1>${articulo.descripcion || 'Artículo sin título'}</h1>
+                <h1>
+                Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!<button class="share-button"><br>
+                <i class="fas fa-share-alt"></i></button>${articulo.descripcion || 'Artículo sin título'}
+                </h1>
             </div>
             <div class="package-content-wrapper">
                 <div class="package-main-content">
