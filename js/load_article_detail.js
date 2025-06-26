@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const urlParams = new URLSearchParams(window.location.search);
     const articuloId = urlParams.get('id');
-
+    const divisor=2;
+    const textoPrecioConDivision = `${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}`;
     if (!articuloId) {
         if (loadingMessage) loadingMessage.style.display = 'none';
         if (errorMessage) {
@@ -66,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="sidebar-block price-summary">
                         <div class="price-item">
                             <span>Precio por persona</span>
-                            <span class="value">$2.131.937</span>
+                            <span class="value">$${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}</span>
                         </div>
                         <div class="price-item total-price">
                             <span>Precio total para 2 personas <i class="fas fa-info-circle"
