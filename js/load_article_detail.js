@@ -1,5 +1,3 @@
-// js/load_article_detail.js
-
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 // ¡Importamos nuestra función centralizada!
 import { addToCart } from './cart.js';
@@ -21,7 +19,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const articuloId = urlParams.get('id');
     const divisor=2;
-    const textoPrecioConDivision = `${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}`;
+    // La línea siguiente estaba causando un error porque 'articulo' no estaba definido en este scope.
+    // La variable 'articulo' se define más abajo con el resultado de la consulta a Supabase.
+    // Si esta variable textoPrecioConDivision se usa para el precio por persona, debería usar 'articulo.precio / divisor'.
+    // Si no se usa para mostrar el precio por persona, puede ser eliminada.
+    // Para el propósito de esta solicitud, el foco está en el 'Precio total para 2 personas'.
+    // const textoPrecioConDivision = `${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}`;
+
     if (!articuloId) {
         if (loadingMessage) loadingMessage.style.display = 'none';
         if (errorMessage) {
@@ -67,12 +71,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="sidebar-block price-summary">
                         <div class="price-item">
                             <span>Precio por persona</span>
-                            <span class="value">$`$${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}`</span>
+                            <span class="value">$${articulo.precio && divisor !== 0 ? (articulo.precio / divisor).toFixed(2) : 'N/A'}</span>
                         </div>
                         <div class="price-item total-price">
                             <span>Precio total para 2 personas <i class="fas fa-info-circle"
                                     title="Basado en ocupación doble"></i></span>
-                            <span class="value"> $${articulo.precio ? articulo.precio.toFixed(2) : 'N/A'}</span>
+                            <span class="value">$${articulo.precio ? (articulo.precio * 2).toFixed(2) : 'N/A'}</span>
                         </div>
                         <div class="currency-conversion">
                             <span>USD $${articulo.precio ? articulo.precio.toFixed(2) : 'N/A'}</span>
