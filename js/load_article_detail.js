@@ -2,7 +2,7 @@
 
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 // ¡Importamos nuestra función centralizada!
-import { addToCart } from './cart.js'; 
+import { addToCart } from './cart.js';
 
 // Tus credenciales de Supabase
 const SUPABASE_URL = 'https://cywsonaxzsfixwtdazgm.supabase.co';
@@ -42,10 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         articleDetailContainer.innerHTML = `
             <div class="detail-header">
-                <h1>
-                Últimos lugares. Reservá con el 40% y aboná el resto en cuotas antes de viajar!<button class="share-button"><i class="fas fa-share-alt"></i></button> <br><br>
-                ${articulo.descripcion || 'Artículo sin título'}
-                </h1>
+                <h1>${articulo.descripcion || 'Artículo sin título'}</h1>
             </div>
             <div class="package-content-wrapper">
                 <div class="package-main-content">
@@ -101,17 +98,23 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
         `;
 
-        const addToCartBtn = articleDetailContainer.querySelector('.add-to-cart-detail');
-        if (addToCartBtn) {
-            addToCartBtn.addEventListener('click', async () => {
-                const articuloId = addToCartBtn.dataset.articuloId;
-                const articuloPrecio = parseFloat(addToCartBtn.dataset.articuloPrecio);
-                alert(`Artículo ${articuloId} ($${articuloPrecio}) agregado al carrito desde la página de detalles.`);
-                // Aquí deberías integrar la lógica real para agregar al carrito,
-                // por ejemplo, llamando a una función global de carrito o importándola.
-            });
-        }
+        setTimeout(() => {
+            const addToCartBtn = document.querySelector('.btn-cart');
 
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', async () => {
+                    const articuloId = addToCartBtn.dataset.articuloId;
+                    const articuloPrecio = parseFloat(addToCartBtn.dataset.articuloPrecio);
+
+                    // ¡Llamamos a la función centralizada para añadir al carrito!
+                    await addToCart(articuloId, articuloPrecio);
+                });
+            } else {
+                console.error("Botón 'Agregar al carrito' no encontrado en la página de detalles.");
+            }
+        }, 100); // Pequeño retraso para asegurar que el DOM se haya actualizado.
+
+        
     } catch (err) {
         console.error('Error inesperado al cargar los detalles del artículo:', err);
         if (loadingMessage) loadingMessage.style.display = 'none';
